@@ -1,4 +1,13 @@
-# p1-mastermind-Javier Diaz Lopez
+# P1: Mastermind - Javier Diaz Lopez
+
+## Modelo del Dominio
+![This is a alt text.](Mastermind.jpg "Mastermind.")
+>Mas info: https://www.youtube.com/watch?v=oAMTGSovbHo
+
+### Vocabulario
+![This is a alt text.](domain-model.jpg "Mastermind domain model")
+
+### Instrucciones de entrega
 
 Entrega de un proyecto público en git varias ramas:
 
@@ -19,5 +28,4 @@ Entrega de un proyecto público en git varias ramas:
         * Implementación: https://github.com/USantaTecla-ticTacToe/tictactoe/tree/documentView/src/main/java/usantatecla
 
 
-
-Cursando el Master Cloud Apps CURSO 2020/21 [Markdown Live Preview](https://www.codeurjc.es/mastercloudapps/).
+Cursando el Master Cloud Apps curso 2020/21 [MasterCloudApps](https://www.codeurjc.es/mastercloudapps/).
