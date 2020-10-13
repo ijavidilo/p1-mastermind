@@ -4,7 +4,7 @@
 ![This is a alt text.](Mastermind.jpg "Mastermind.")
 >Mas info: https://www.youtube.com/watch?v=oAMTGSovbHo
 
-### Vocabulario
+### Diagrama
 ![This is a alt text.](domain-model.jpg "Mastermind domain model")
 
 ### Instrucciones de entrega
