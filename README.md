@@ -5,7 +5,7 @@
 >Mas info: https://www.youtube.com/watch?v=oAMTGSovbHo
 
 ### Diagrama de clases
-![This is a alt text.](diagrama-clases.jpg "Mastermind diseño de clases")
+![This is a alt text.](diagrama-clases-v2.jpg "Mastermind diseño de clases")
 
 ### Instrucciones de entrega (parte 2: domainModel)
 
