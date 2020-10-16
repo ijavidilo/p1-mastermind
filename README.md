@@ -15,17 +15,17 @@ Entrega de un proyecto público en git varias ramas:
 >* domainModel, con:
 >    * el diseño de clases, con plantuml en readme o con StarUML con el documento  
 >    * solución en Java o similar (fuertemente tipado) basada en el capitulo de Diseño y el proyecto ticTacToe
->        * Modelo del Dominio: https://github.com/USantaTecla-ticTacToe/tictactoe.requirements
->        * Requisitos: https://github.com/USantaTecla-ticTacToe/tictactoe.requirements/tree/1.Basica
->        * Diseño: https://github.com/USantaTecla-ticTacToe/tictactoe/tree/domainModel/docs
->        * Implementación:  https://github.com/USantaTecla-ticTacToe/tictactoe/tree/domainModel/src/main/java/usantatecla
+>        * Modelo del Dominio: https://github.com/ijavidilo/p1-mastermind/tree/domainModel#modelo-del-dominio
+>        * Diseño: https://github.com/ijavidilo/p1-mastermind/tree/domainModel#diagrama-de-clases
+>        * Implementación:  https://github.com/ijavidilo/p1-mastermind/tree/domainModel/domainModel.project
+>           * Compile but not works 
  * documentView, con:
     * el diseño de clases, con plantuml en readme o con StarUML con el documento  
     * solución en Java o similar (fuertemente tipado) basada en el capitulo de Diseño Modular y el proyecto ticTacToe
-        * Modelo del Dominio: https://github.com/USantaTecla-ticTacToe/tictactoe.requirements
-        * Requisitos: https://github.com/USantaTecla-ticTacToe/tictactoe.requirements/tree/1.Basica
-        * Diseño: https://github.com/USantaTecla-ticTacToe/tictactoe/tree/documentView/docs
-        * Implementación: https://github.com/USantaTecla-ticTacToe/tictactoe/tree/documentView/src/main/java/usantatecla
+        * Modelo del Dominio: 
+        * Requisitos: 
+        * Diseño: 
+        * Implementación: 
 
 
 Cursando el Master Cloud Apps curso 2020/21 [MasterCloudApps](https://www.codeurjc.es/mastercloudapps/).
