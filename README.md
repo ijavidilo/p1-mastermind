@@ -1,4 +1,7 @@
-# P1: Mastermind - Javier Diaz Lopez
+# P1: Mastermind - Javier Diaz Lopez (parte 2: domainModel)
+
+  * ## Anotaciones alumno: 
+  > Para esta parte 2 de la práctica se ha creado un diseño propio para el juego Mastermind e implementado las clases con mi propio diseño. He de decir que el codigo compila pero no en tiempo de ejecución por falta de tiempo. Se han entendido todas las partes de este modelo.
 
 ## Modelo del Dominio
 ![This is a alt text.](Mastermind.jpg "Mastermind.")
@@ -18,7 +21,7 @@ Entrega de un proyecto público en git varias ramas:
 >        * Modelo del Dominio: https://github.com/ijavidilo/p1-mastermind/tree/domainModel#modelo-del-dominio
 >        * Diseño: https://github.com/ijavidilo/p1-mastermind/tree/domainModel#diagrama-de-clases
 >        * Implementación:  https://github.com/ijavidilo/p1-mastermind/tree/domainModel/domainModel.project
->           * Compile but not works 
+>           * Compila pero no funciona
  * documentView, con:
     * el diseño de clases, con plantuml en readme o con StarUML con el documento  
     * solución en Java o similar (fuertemente tipado) basada en el capitulo de Diseño Modular y el proyecto ticTacToe
