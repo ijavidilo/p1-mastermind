@@ -14,26 +14,24 @@ enum MessageView {
 
 	private String message;
 
-	private Console console;
-
 	private MessageView(String message) {
 		this.message = message;
 	}
 
 	void write() {
-		this.console.write(this.message);
+		new Console().write(this.message);
 	}
 
 	void writeln() {
-		this.console.writeln(this.message);
+		new Console().writeln(this.message);
 	}
 
 	void writeln(int attempts) {
-		this.console.writeln(this.message.replaceAll("#attempts", "" + attempts));
+		new Console().writeln(this.message.replaceAll("#attempts", "" + attempts));
 	}
 
 	void writeln(int blacks, int whites) {
-		this.console.writeln(this.message.replaceFirst("#blacks", "" + blacks).replaceFirst("#whites", "" + whites));
+		new Console().writeln(this.message.replaceFirst("#blacks", "" + blacks).replaceFirst("#whites", "" + whites));
 	}
 
 }
