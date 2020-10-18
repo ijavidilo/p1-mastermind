@@ -4,8 +4,6 @@ import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermin
 
 public class View {
 
-	protected Game game;
-
 	private StartView startView;
 
 	private ProposalView proposalView;
@@ -13,10 +11,9 @@ public class View {
 	private ResumeView resumeView;
 
 	public View(Game game) {
-		this.game = game;
 		this.startView = new StartView();
-		this.proposalView = new ProposalView(this.game);
-		this.resumeView = new ResumeView(this.game);
+		this.proposalView = new ProposalView(game);
+		this.resumeView = new ResumeView(game);
 	}
 
 	public void interact() {
