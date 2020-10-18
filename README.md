@@ -1,7 +1,7 @@
 # P1: Mastermind - Javier Diaz Lopez (parte 4: objectOrientedDesign)
 
   * ## Anotaciones alumno: 
-  > Para realizar esta parte de la práctica se ha empezado la implementación partiendo de la base proporcionada del profesor de la rama "documentView". Se va a realizar varios commits (ver https://github.com/ijavidilo/p1-mastermind/tree/documentView#instrucciones-de-entrega-parte-4-objectOrientedDesign) en esta rama para asegurar que se entiende el temario impartido por el profesor.
+  > Para realizar esta parte de la práctica se ha empezado la implementación partiendo de la base proporcionada del profesor de la rama "documentView". Se va a realizar varios commits (ver https://github.com/ijavidilo/p1-mastermind/tree/objectOrientedDesign#instrucciones-de-entrega-parte-4-objectorienteddesign) en esta rama para asegurar que se entiende el temario impartido por el profesor.
 
 ## Modelo del Dominio
 ![This is a alt text.](Mastermind.jpg "Mastermind.")
