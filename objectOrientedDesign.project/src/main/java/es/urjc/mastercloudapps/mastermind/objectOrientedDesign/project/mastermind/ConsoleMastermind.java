@@ -3,18 +3,11 @@ package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermi
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.console.View;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Game;
 
-public class ConsoleMastermind {
+public class ConsoleMastermind extends Mastermind {
 
-	private Game game;
-	private View view;
-
-	private ConsoleMastermind() {
-		this.game = new Game();
-		this.view = new View(this.game);
-	}
-
-	private void play() {
-		this.view.interact();
+	@Override
+	protected View createView(Game game) {
+		return new View(game);
 	}
 
 	public static void main(String[] args) {
