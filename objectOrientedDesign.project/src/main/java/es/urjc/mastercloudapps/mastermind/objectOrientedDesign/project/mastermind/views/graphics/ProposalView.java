@@ -1,4 +1,4 @@
-package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views;
+package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.graphics;
 
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Game;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.ProposedCombination;

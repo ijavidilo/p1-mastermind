@@ -2,30 +2,24 @@ package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermi
 
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Game;
 
-public class View {
+public abstract class View {
 
-	private StartView startView;
-
-	private ProposalView proposalView;
-
-	private ResumeView resumeView;
+	protected Game game;
 
 	public View(Game game) {
-		this.startView = new StartView();
-		this.proposalView = new ProposalView(game);
-		this.resumeView = new ResumeView(game);
+		this.game = game;
 	}
 
 	public void interact() {
-		boolean newGame;
 		do {
-			this.startView.interact();
-			boolean finished;
+			this.start();
 			do {
-				finished = this.proposalView.interact();
-			} while (!finished);
-			newGame = this.resumeView.interact();
-		} while (newGame);
+			} while (!this.proposal());
+		} while (this.isResume());
 	}
+
+	protected abstract void start();
+	protected abstract boolean proposal();
+	protected abstract boolean isResume();
 
 }

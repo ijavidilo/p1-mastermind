@@ -1,10 +1,9 @@
-package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views;
+package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.graphics;
 
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Color;
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Error;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Combination;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Error;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.ProposedCombination;
-
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.utils.WithConsoleView;
 
 class ProposedCombinationView extends WithConsoleView {
