@@ -3,13 +3,14 @@ package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermi
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Game;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.ProposedCombination;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Result;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.State;
 
 public class ProposalController extends Controller {
 
-    public ProposalController(Game game) {
-        super(game);
+    public ProposalController(Game game, State state) {
+        super(game, state);
     }
-    
+
     public boolean isWinner() {
         return this.game.isWinner();
     }

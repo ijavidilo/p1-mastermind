@@ -1,6 +1,6 @@
 package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.console;
 
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.Logic;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.*;
 
 public class View extends es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.View {
 
@@ -8,25 +8,22 @@ public class View extends es.urjc.mastercloudapps.mastermind.objectOrientedDesig
 	private ProposalView proposalView;
 	private ResumeView resumeView;
 
-	public View(Logic logic) {
-		this.startView = new StartView(logic);
-		this.proposalView = new ProposalView(logic);
-		this.resumeView = new ResumeView(logic);
+	public View() {
+		this.startView = new StartView();
+		this.proposalView = new ProposalView();
+		this.resumeView = new ResumeView();
 	}
 
 	@Override
-	protected void start() {
-		this.startView.interact();
+	public void interact(Controller controller) {
+		if (controller instanceof StartController) {
+			this.startView.interact((StartController) controller);
+		} else {
+			if (controller instanceof ProposalController) {
+				this.proposalView.interact((ProposalController) controller);
+			} else {
+				this.resumeView.interact((ResumeController) controller);
+			}
+		}
 	}
-
-	@Override
-	protected boolean proposal() {
-		return this.proposalView.interact();
-	}
-
-	@Override
-	protected boolean isResume() {
-		return this.resumeView.interact();
-	}
-
 }

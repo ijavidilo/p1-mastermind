@@ -1,24 +1,29 @@
 package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind;
 
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.Controller;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.Logic;
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Game;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.View;
 
 public abstract class Mastermind {
 
-    private Game game;
-    private View view;
     private Logic logic;
+    private View view;
 
     protected Mastermind() {
-        this.game = new Game();
-        this.view = this.createView(this.logic);
+        this.logic = new Logic();
+        this.view = this.createView();
     }
 
-    protected abstract View createView(Logic logic);
+    protected abstract View createView();
 
     protected void play() {
-        this.view.interact();
+        Controller controller;
+        do {
+            controller = this.logic.getController();
+            if (controller != null) {
+                this.view.interact(controller);
+            }
+        } while (controller != null);
     }
 
 }

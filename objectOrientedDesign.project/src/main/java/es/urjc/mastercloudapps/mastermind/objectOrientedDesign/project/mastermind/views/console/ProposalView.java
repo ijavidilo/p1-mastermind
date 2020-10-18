@@ -1,37 +1,37 @@
 package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.console;
 
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.Logic;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.ProposalController;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.ProposedCombination;
 
-class ProposalView extends SubView {
+class ProposalView {
 
     private SecretCombinationView secretCombinationView;
 
-    ProposalView(Logic logic) {
-        super(logic);
-    }
+    boolean interact(ProposalController proposalController) {
+        boolean newGame = false;
 
-    boolean interact() {
         ProposedCombination proposedCombination = new ProposedCombination();
         ProposedCombinationView proposedCombinationView = new ProposedCombinationView(proposedCombination);
         proposedCombinationView.read();
-        this.logic.addProposedCombination(proposedCombination);
+        proposalController.addProposedCombination(proposedCombination);
 
-        MessageView.ATTEMPTS.writeln(this.logic.getAttempts());
+        MessageView.ATTEMPTS.writeln(proposalController.getAttempts());
         secretCombinationView = new SecretCombinationView();
         this.secretCombinationView.writeln();
-        for (int i = 0; i < this.logic.getAttempts(); i++) {
-            new ProposedCombinationView(this.logic.getProposedCombination(i)).write();
-            new ResultView(this.logic.getResult(i)).writeln();
+        for (int i = 0; i < proposalController.getAttempts(); i++) {
+            new ProposedCombinationView(proposalController.getProposedCombination(i)).write();
+            new ResultView(proposalController.getResult(i)).writeln();
         }
-        if (this.logic.isWinner()) {
+        if (proposalController.isWinner()) {
             MessageView.WINNER.writeln();
-            return true;
-        } else if (this.logic.isLooser()) {
+            newGame = true;
+        } else if (proposalController.isLooser()) {
             MessageView.LOOSER.writeln();
-            return true;
+            newGame = true;
         }
-        return false;
+
+        proposalController.next();
+        return newGame;
     }
 
 }

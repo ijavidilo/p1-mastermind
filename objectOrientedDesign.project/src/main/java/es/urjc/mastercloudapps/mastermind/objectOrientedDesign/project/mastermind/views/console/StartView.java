@@ -1,16 +1,12 @@
 package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.console;
 
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.Logic;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.StartController;
 
-class StartView extends SubView {
+class StartView {
 
-	StartView(Logic logic) {
-		super(logic);
-	}
-
-	void interact() {
+	void interact(StartController startController) {
 		MessageView.TITLE.writeln();
-		logic.getSecretCombination();
+		startController.getSecretCombination();
 	}
 
 }
