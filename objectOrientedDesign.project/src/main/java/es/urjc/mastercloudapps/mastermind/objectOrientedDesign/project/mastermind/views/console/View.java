@@ -1,8 +1,6 @@
 package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.console;
 
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.ProposalController;
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.ResumeController;
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.StartController;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.Logic;
 
 public class View extends es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.View {
 
@@ -10,10 +8,10 @@ public class View extends es.urjc.mastercloudapps.mastermind.objectOrientedDesig
 	private ProposalView proposalView;
 	private ResumeView resumeView;
 
-	public View(StartController startController, ProposalController proposalController, ResumeController resumeController) {
-		this.startView = new StartView(startController);
-		this.proposalView = new ProposalView(proposalController);
-		this.resumeView = new ResumeView(resumeController);
+	public View(Logic logic) {
+		this.startView = new StartView(logic);
+		this.proposalView = new ProposalView(logic);
+		this.resumeView = new ResumeView(logic);
 	}
 
 	@Override

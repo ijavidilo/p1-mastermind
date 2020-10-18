@@ -1,23 +1,21 @@
 package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.console;
 
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.ResumeController;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.Logic;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.utils.YesNoDialog;
 
-class ResumeView {
+class ResumeView extends SubView {
 
-	private ResumeController resumeController;
+    ResumeView(Logic logic) {
+        super(logic);
+    }
 
-	ResumeView(ResumeController resumeController) {
-		this.resumeController = resumeController;
-	}
-
-	boolean interact() {
-		MessageView.RESUME.write();
-		boolean newGame = new YesNoDialog().read();
-		if (newGame) {
-			this.resumeController.clear();
-		}
-		return newGame;
-	}
+    boolean interact() {
+        MessageView.RESUME.write();
+        boolean newGame = new YesNoDialog().read();
+        if (newGame) {
+            this.logic.clear();
+        }
+        return newGame;
+    }
 
 }

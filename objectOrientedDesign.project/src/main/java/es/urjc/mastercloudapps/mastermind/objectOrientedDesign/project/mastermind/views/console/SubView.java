@@ -2,15 +2,12 @@ package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermi
 
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.Logic;
 
-class StartView extends SubView {
+public class SubView {
 
-	StartView(Logic logic) {
-		super(logic);
-	}
+    protected Logic logic;
 
-	void interact() {
-		MessageView.TITLE.writeln();
-		logic.getSecretCombination();
-	}
+    SubView(Logic logic) {
+        this.logic = logic;
+    }
 
 }

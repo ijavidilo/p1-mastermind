@@ -1,12 +1,10 @@
 package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.graphics;
 
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.ProposalController;
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.ResumeController;
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.StartController;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.Logic;
 
 public class View extends es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.View {
 
-	public View(StartController startController, ProposalController proposalController, ResumeController resumeController) {
+	public View(Logic logic) {
 	}
 
 	@Override
