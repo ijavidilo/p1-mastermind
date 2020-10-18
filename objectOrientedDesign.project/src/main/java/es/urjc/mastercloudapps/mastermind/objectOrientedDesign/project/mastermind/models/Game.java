@@ -32,6 +32,10 @@ public class Game {
 		this.attempts++;
 	}
 
+	public SecretCombination getSecretCombination() {
+		return this.secretCombination;
+	}
+
 	public boolean isLooser() {
 		return this.attempts == Game.MAX_LONG;
 	}
