@@ -1,0 +1,32 @@
+Alumno:
+-------
+Javier Díaz López
+
+URL repositorio práctica: 
+-------------------------
+https://github.com/ijavidilo/p1-mastermind
+
+Autoevaluación del alumno:
+--------------------------
+(Calificación: 7)
+
+Bajo mi punto de he vista he entendido las diferentes soluciones proporcionadas por el profesor satisfactoriamente. Me gustaria dividir la autoevaluación en tres aspectos:	
+* Estudio: sobresaliente. (9)
+	He dedicado más horas de las propuestas para entender perfectamente lo que son las bases del máster.
+* Diagramas: suficiente. (5) 
+	He realizado algun diagrama durante este bloque pero sin duda tengo que mejorar ya que no he trabajado con dichas herramientas y me he visto bastante "torpe". Estoy seguro que mejoraré en este aspecto para futuras entregas.
+* Implementaciones: notable. (7)
+	Aunque me ha "salido" todo, ha habido partes que he dejado sin acabar por falta de tiempo. Me hubiera gustado cerrar todo perfecto.
+
+Evaluación del profesor:
+------------------------
+(Calificación global: 8)
+
+Lo malo:
+	- Demasiados temas iniciales para mirarlos por mi cuenta.
+	- Explicación confusa sobre los entregables de la práctica.
+	- Bastante perdido hasta la tercera clase.
+Lo bueno:
+	- Da gusto dar clase con Luis dada su experiencia y conocimiento.
+	- Explicaciones a dudas/comentarios de diferentes maneras/puntos de vista para que lo entiendas.
+	- El poema del conocimiento.
