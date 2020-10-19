@@ -1,17 +1,17 @@
-# P1: Mastermind - Javier Diaz Lopez (parte 4: objectOrientedDesign)
+# P1: Mastermind - Javier Diaz Lopez (parte 4: modelViewPresenter)
 
   * ## Anotaciones alumno: 
-  > Para realizar esta parte de la práctica se ha empezado la implementación partiendo de la base proporcionada del profesor de la rama "documentView". Se va a realizar varios commits (ver https://github.com/ijavidilo/p1-mastermind/tree/objectOrientedDesign#instrucciones-de-entrega-parte-4-objectorienteddesign) en esta rama para asegurar que se entiende el temario impartido por el profesor.
+  > Para realizar esta parte de la práctica se ha empezado la implementación partiendo de la base proporcionada del profesor de la rama "documentView". Se va a realizar varios commits (ver https://github.com/ijavidilo/p1-mastermind/tree/modelViewPresenter#instrucciones-de-entrega-parte-4-objectorienteddesign) en esta rama para asegurar que se entiende el temario impartido por el profesor.
 
 ## Modelo del Dominio
 ![This is a alt text.](Mastermind.jpg "Mastermind.")
 >Mas info: https://www.youtube.com/watch?v=oAMTGSovbHo
 
-### Diagramas objectOrientedDesign
+### Diagramas modelViewPresenter
 #### - Paquete mastermind.views
-![This is a alt text.](documentView_view.jpg "Mastermind document view - Paquete mastermind.views")
+![This is a alt text.](./diagramas/mastermind.models.plantuml "Mastermind document view - Paquete mastermind.views")
 
-### Instrucciones de entrega (parte 4: objectOrientedDesign)
+### Instrucciones de entrega (parte 4: modelViewPresenter)
 
 Entrega de un proyecto público en git varias ramas:
 
@@ -30,12 +30,13 @@ Entrega de un proyecto público en git varias ramas:
         * Requisitos:  https://github.com/ijavidilo/p1-mastermind/tree/master/Requisitos
         * Diseño: https://github.com/ijavidilo/p1-mastermind/tree/documentView#diagrama-documentview
         * Implementación: He copiado y entendido directamente el codigo del profesor
-> * **objectOrientedDesign**, con:
+> * **modelViewPresenter**, con:
 >    * el diseño de clases, con plantuml en readme o con StarUML con el documento  
->    * solución en Java o similar (fuertemente tipado) basada en el capitulo de Diseño Modular y el proyecto ticTacToe
->        * Modelo del Dominio: https://github.com/ijavidilo/p1-mastermind/tree/objectOrientedDesign#modelo-del-dominio
+>    * solución en Java o similar (fuertemente tipado) basada en el capitulo de Diseño Orientado a Objetos y el proyecto ticTacToe desde la rama dv.withoutFactoryMethod hasta mvp.pm.withDoubleDispatching
+>        * Modelo del Dominio: https://github.com/ijavidilo/p1-mastermind/tree/modelViewPresenter#modelo-del-dominio
 >        * Requisitos:  https://github.com/ijavidilo/p1-mastermind/tree/master/Requisitos
->        * Commits:
+>        * Diseño: https://github.com/ijavidilo/p1-mastermind/tree/modelViewPresenter#diagrama-documentview
+>        * Implementación:
 >          * **Versión 3.2: dv.withoutFactoryMethod** -> Clase Vistas de Interfaz Gráfica de Usuario pero con DRY en Vistas de tecnologías diferentes y con Modelos de grano grueso con el advenimiento de nueva funcionalidad
 >              *  https://github.com/ijavidilo/p1-mastermind/releases/tag/dv.withoutFactoryMethod
 >          * **Versión 4.2. dv.withFactoryMethod** -> Clase Vista abstracta para Open/Close de sus tecnologías pero con Modelos de grano grueso con el advenimiento de nueva funcionalidad
@@ -48,7 +49,5 @@ Entrega de un proyecto público en git varias ramas:
 >              *  https://github.com/ijavidilo/p1-mastermind/releases/tag/mvp.pm.withoutDoubleDispatching
 >          * **Versión 8.2. mvp.pm.withDoubleDispatching** -> Clase Vistador de Controladores para Técnica de Doble Despacho
 >              *  https://github.com/ijavidilo/p1-mastermind/releases/tag/mvp.pm.withDoubleDispatching
->        * Diseño: https://github.com/ijavidilo/p1-mastermind/tree/objectOrientedDesign#diagrama-documentview
->        * Implementación:
 
 Cursando el Master Cloud Apps curso 2020/21 [MasterCloudApps](https://www.codeurjc.es/mastercloudapps/).

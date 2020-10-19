@@ -1,7 +1,7 @@
 package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind;
 
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.Controller;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.Logic;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.UseCaseController;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.View;
 
 public abstract class Mastermind {
@@ -17,13 +17,13 @@ public abstract class Mastermind {
     protected abstract View createView();
 
     protected void play() {
-        Controller controller;
+        UseCaseController useCaseController;
         do {
-            controller = this.logic.getController();
-            if (controller != null) {
-                this.view.interact(controller);
+            useCaseController = this.logic.getController();
+            if (useCaseController != null) {
+                this.view.interact(useCaseController);
             }
-        } while (controller != null);
+        } while (useCaseController != null);
     }
 
 }

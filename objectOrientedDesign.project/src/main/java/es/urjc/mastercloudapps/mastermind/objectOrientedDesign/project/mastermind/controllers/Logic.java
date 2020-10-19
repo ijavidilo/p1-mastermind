@@ -11,19 +11,19 @@ public class Logic {
 
     private Game game;
     private State state;
-    private Map<StateValue, Controller> controllers;
+    private Map<StateValue, UseCaseController> controllers;
 
     public Logic() {
         this.state = new State();
         this.game = new Game();
-        this.controllers = new HashMap<StateValue, Controller>();
+        this.controllers = new HashMap<StateValue, UseCaseController>();
         this.controllers.put(StateValue.CLOSE, new StartController(this.game, this.state));
         this.controllers.put(StateValue.OPEN, new ProposalController(this.game, this.state));
         this.controllers.put(StateValue.FINISHED, new ResumeController(this.game, this.state));
         this.controllers.put(StateValue.EXIT, null);
     }
 
-    public Controller getController() {
+    public UseCaseController getController() {
         return this.controllers.get(this.state.getValueState());
     }
 

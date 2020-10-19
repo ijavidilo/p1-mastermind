@@ -5,7 +5,7 @@ import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermin
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Result;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.State;
 
-public class ProposalController extends Controller {
+public class ProposalController extends UseCaseController {
 
     public ProposalController(Game game, State state) {
         super(game, state);
@@ -33,6 +33,11 @@ public class ProposalController extends Controller {
 
     public Result getResult(int position) {
         return this.game.getResult(position);
+    }
+
+    @Override
+    public void accept(ControllerVisitor controllerVisitor) {
+        controllerVisitor.visit(this);
     }
 
 }
