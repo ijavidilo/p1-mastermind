@@ -8,8 +8,12 @@
 >Mas info: https://www.youtube.com/watch?v=oAMTGSovbHo
 
 ### Diagramas modelViewPresenter
+#### - Paquete mastermind.models
+  > /diagramas/mastermind.models.plantuml 
 #### - Paquete mastermind.views
-![This is a alt text.](./diagramas/mastermind.models.plantuml "Mastermind document view - Paquete mastermind.views")
+  > /diagramas/mastermind.views.plantuml 
+#### - Paquete mastermind.utils
+  > /diagramas/mastermind.utils.plantuml 
 
 ### Instrucciones de entrega (parte 4: modelViewPresenter)
 
@@ -50,4 +54,4 @@ Entrega de un proyecto público en git varias ramas:
 >          * **Versión 8.2. mvp.pm.withDoubleDispatching** -> Clase Vistador de Controladores para Técnica de Doble Despacho
 >              *  https://github.com/ijavidilo/p1-mastermind/releases/tag/mvp.pm.withDoubleDispatching
 
-Cursando el Master Cloud Apps curso 2020/21 [MasterCloudApps](https://www.codeurjc.es/mastercloudapps/).
+Master Cloud Apps curso 2020/21 [MasterCloudApps](https://www.codeurjc.es/mastercloudapps/).
