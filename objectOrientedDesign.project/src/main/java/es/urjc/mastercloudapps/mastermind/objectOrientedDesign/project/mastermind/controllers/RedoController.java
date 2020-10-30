@@ -4,15 +4,15 @@ import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermin
 
 public class RedoController extends UseCaseController {
 
-    RedoController(Session session) {
+    public RedoController(Session session) {
         super(session);
     }
 
-    void redo() {
+    public void redo() {
         this.session.redo();
     }
 
-    boolean redoable() {
+    public boolean redoable() {
         return this.session.redoable();
     }
 

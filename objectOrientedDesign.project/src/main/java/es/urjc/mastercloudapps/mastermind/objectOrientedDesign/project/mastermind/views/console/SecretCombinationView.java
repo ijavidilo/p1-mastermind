@@ -4,16 +4,16 @@ import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermin
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.MessageView;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.utils.WithConsoleView;
 
-class SecretCombinationView extends WithConsoleView {
+public class SecretCombinationView extends WithConsoleView {
 	
 	private UseCaseController controller;
-	
-	SecretCombinationView(UseCaseController controller) {
+
+	public SecretCombinationView(UseCaseController controller) {
 		super();
 		this.controller = controller;
 	}
-	
-	void writeln() {
+
+	public void writeln() {
 		for (int i = 0; i < this.controller.getWidth(); i++) {
 			this.console.write(MessageView.SECRET.getMessage());
 		}

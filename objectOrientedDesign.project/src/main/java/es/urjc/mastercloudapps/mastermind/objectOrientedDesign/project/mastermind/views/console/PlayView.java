@@ -4,7 +4,7 @@ import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermin
 
 public class PlayView {
 
-    void interact(PlayController playController) {
+    public void interact(PlayController playController) {
         new PlayMenu(playController).execute();
     }
 

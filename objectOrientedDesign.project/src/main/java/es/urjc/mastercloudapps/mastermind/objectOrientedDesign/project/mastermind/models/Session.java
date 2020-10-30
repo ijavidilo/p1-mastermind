@@ -6,25 +6,25 @@ import java.util.List;
 
 public class Session {
 
-    private State state;
     private Game game;
-    //private Registry registry;
+    private State state;
+    private GameRegistry registry;
 
     public Session() {
-        this.state = new State();
         this.game = new Game();
-        //this.registry = new Registry(this.game);
+        this.state = new State();
+        this.registry = new GameRegistry(this.game);
     }
 
     public void isNewGame() {
         this.game.clear();
         this.state.reset();
-        //this.registry.reset();
+        this.registry.reset();
     }
 
     public void addProposedCombination(List<Color> colors) {
         this.game.addProposedCombination(colors);
-        //this.registry.registry();
+        this.registry.registry();
     }
 
     public boolean isLooser() {
@@ -64,21 +64,19 @@ public class Session {
     }
 
     public boolean undoable() {
-        //return this.registry.undoable();
-        return false;
-    }
-
-    public boolean redoable() {
-        //return this.registry.redoable();
-        return false;
+        return this.registry.undoable();
     }
 
     public void undo() {
-        //this.registry.undo(this.game);
+        this.registry.undo(this.game);
+    }
+
+    public boolean redoable() {
+        return this.registry.redoable();
     }
 
     public void redo() {
-        //this.registry.redo(this.game);
+        this.registry.redo(this.game);
     }
 
 }

@@ -5,7 +5,7 @@ import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermin
 
 public class UndoCommand extends Command {
 
-    UndoCommand(PlayController playController) {
+    public UndoCommand(PlayController playController) {
         super(MessageView.UNDO_COMMAND.getMessage(), playController);
     }
 

@@ -6,7 +6,7 @@ public abstract class UseCaseController {
 
     protected Session session;
 
-    UseCaseController(Session session) {
+    public UseCaseController(Session session) {
         this.session = session;
     }
 

@@ -5,7 +5,7 @@ import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermin
 
 public class RedoCommand extends Command {
 
-    RedoCommand(PlayController playController) {
+    public RedoCommand(PlayController playController) {
         super(MessageView.REDO_COMMAND.getMessage(), playController);
     }
 

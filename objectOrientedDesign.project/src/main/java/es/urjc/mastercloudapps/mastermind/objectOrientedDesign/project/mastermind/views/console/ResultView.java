@@ -4,15 +4,15 @@ import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermin
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.MessageView;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.utils.WithConsoleView;
 
-class ResultView extends WithConsoleView {
+public class ResultView extends WithConsoleView {
 
     private PlayController playController;
 
-    ResultView(PlayController playController) {
+    public ResultView(PlayController playController) {
         this.playController = playController;
     }
 
-    void writeln(int i) {
+    public void writeln(int i) {
         this.console.writeln(MessageView.RESULT.getMessage()
                 .replaceFirst("#blacks", "" + this.playController.getBlacks(i))
                 .replaceFirst("#whites", "" + this.playController.getWhites(i)));

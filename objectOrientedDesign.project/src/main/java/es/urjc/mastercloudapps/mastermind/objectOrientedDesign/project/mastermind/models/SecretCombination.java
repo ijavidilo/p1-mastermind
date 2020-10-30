@@ -5,9 +5,9 @@ import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermin
 import java.util.Collections;
 import java.util.Random;
 
-class SecretCombination extends Combination {
+public class SecretCombination extends Combination {
 
-	SecretCombination() {
+	public SecretCombination() {
 		for(Color color: Color.values()) {
 			this.colors.add(color);
 		}
@@ -18,7 +18,7 @@ class SecretCombination extends Combination {
 		Collections.shuffle(this.colors);
 	}
 
-	Result getResult(ProposedCombination proposedCombination) {
+	public Result getResult(ProposedCombination proposedCombination) {
 		int blacks = 0;
 		for (int i = 0; i < this.colors.size(); i++) {
 			if (proposedCombination.contains(this.colors.get(i), i)) {

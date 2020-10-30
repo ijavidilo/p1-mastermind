@@ -8,11 +8,11 @@ public class AttemptsView extends WithConsoleView {
 
     private PlayController playController;
 
-    AttemptsView(PlayController proposalController) {
+    public AttemptsView(PlayController proposalController) {
         this.playController = proposalController;
     }
 
-    void writeln() {
+    public void writeln() {
         this.console.writeln(
                 MessageView.ATTEMPTS.getMessage().replaceFirst("#attempts", "" +
                         this.playController.getAttempts()));

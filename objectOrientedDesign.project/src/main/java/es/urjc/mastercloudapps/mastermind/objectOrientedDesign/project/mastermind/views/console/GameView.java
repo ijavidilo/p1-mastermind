@@ -4,9 +4,9 @@ import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermin
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.MessageView;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.utils.WithConsoleView;
 
-class GameView extends WithConsoleView {
+public class GameView extends WithConsoleView {
 
-    GameView(PlayController playController) {
+    public GameView(PlayController playController) {
         this.console.writeln();
         new AttemptsView(playController).writeln();
         new SecretCombinationView(playController).writeln();

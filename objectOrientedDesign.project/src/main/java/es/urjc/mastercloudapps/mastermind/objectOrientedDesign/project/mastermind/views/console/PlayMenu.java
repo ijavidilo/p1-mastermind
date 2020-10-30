@@ -5,7 +5,7 @@ import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.utils.Men
 
 public class PlayMenu extends Menu {
 
-    PlayMenu(PlayController playController) {
+    public PlayMenu(PlayController playController) {
         this.add(new ProposeCommand(playController));
         this.add(new UndoCommand(playController));
         this.add(new RedoCommand(playController));
