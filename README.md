@@ -48,9 +48,9 @@ Entrega de un proyecto público en git varias ramas:
 > * **mvp.pm.withComposite**, con:
 >    * el diseño de clases, con plantuml en readme o con StarUML con el documento  
 >    * solución en Java o similar (fuertemente tipado) basada en el capitulo de Patrones de diseño y el proyecto ticTacToe
->        * Modelo del Dominio: https://github.com/ijavidilo/p1-mastermind/tree/documentView#modelo-del-dominio
+>        * Modelo del Dominio: https://github.com/ijavidilo/p1-mastermind/tree/master#diagrama
 >        * Requisitos:  https://github.com/ijavidilo/p1-mastermind/tree/master/Requisitos
 >        * Diseño: 
->        * Implementación:  https://github.com/ijavidilo/p1-mastermind/tree/mvp.pm.withComposite/domainModel.project
+>        * Implementación:  https://github.com/ijavidilo/p1-mastermind/tree/mvp.pm.withComposite/objectOrientedDesign.project
 
 Master Cloud Apps curso 2020/21 [MasterCloudApps](https://www.codeurjc.es/mastercloudapps/).
