@@ -3,13 +3,14 @@ package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermi
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.View;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.graphics.GraphicsView;
 
-public class GraphicsMastermind extends Mastermind{
+public class GraphicsMastermind extends Mastermind {
 
-	protected View createView() {
-		return new GraphicsView();
-	}
-	
-	public static void main(String[] args) {
-		new GraphicsMastermind().play();
-	}
+    @Override
+    protected View createView() {
+        return new GraphicsView();
+    }
+
+    public static void main(String[] args) {
+        new GraphicsMastermind().play();
+    }
 }

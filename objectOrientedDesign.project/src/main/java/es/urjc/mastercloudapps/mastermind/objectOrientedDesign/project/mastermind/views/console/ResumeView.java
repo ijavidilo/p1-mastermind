@@ -6,8 +6,8 @@ import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.utils.Yes
 
 class ResumeView {
 
-	void interact(ResumeController resumeController) {
-		resumeController.resume(new YesNoDialog().read(MessageView.RESUME.getMessage()));
-	}
-	
+    void interact(ResumeController resumeController) {
+        resumeController.resume(new YesNoDialog().read(MessageView.RESUME.getMessage()));
+    }
+
 }

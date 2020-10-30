@@ -5,12 +5,12 @@ import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.utils.Con
 
 class ColorView extends es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.ColorView {
 
-	ColorView(Color color) {
-		super(color);
-	}
-	
-	void write() {
-		new Console().write(ColorView.INITIALS[this.color.ordinal()]);
-	}
+    ColorView(Color color) {
+        super(color);
+    }
+
+    void write() {
+        new Console().write(ColorView.INITIALS[this.color.ordinal()]);
+    }
 
 }

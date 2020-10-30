@@ -1,13 +1,12 @@
 package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind;
 
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.Controller;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.AcceptorController;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.Logic;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.View;
 
 public abstract class Mastermind {
 	
 	private Logic logic;
-	
 	private View view;
 	
 	protected Mastermind() {
@@ -18,13 +17,13 @@ public abstract class Mastermind {
 	protected abstract View createView();
 
 	protected void play() {
-		Controller controller;
+		AcceptorController acceptorController;
 		do {
-			controller = this.logic.getController();
-			if (controller != null){
-				this.view.interact(controller);
+			acceptorController = this.logic.getController();
+			if (acceptorController != null){
+				this.view.interact(acceptorController);
 			}
-		} while (controller != null); 
+		} while (acceptorController != null);
 	}
 	
 }

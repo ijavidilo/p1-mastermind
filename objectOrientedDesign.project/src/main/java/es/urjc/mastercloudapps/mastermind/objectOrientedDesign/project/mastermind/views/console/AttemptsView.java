@@ -1,20 +1,21 @@
 package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.console;
 
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.ProposalController;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.PlayController;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.MessageView;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.utils.WithConsoleView;
 
 public class AttemptsView extends WithConsoleView {
 
-	private ProposalController proposalController;
+    private PlayController playController;
 
-	AttemptsView(ProposalController proposalController) {
-		this.proposalController = proposalController;
-	}
+    AttemptsView(PlayController proposalController) {
+        this.playController = proposalController;
+    }
 
-	void writeln() {
-		this.console.writeln(MessageView.ATTEMPTS.getMessage().replaceFirst("#attempts",
-				"" + this.proposalController.getAttempts()));
-	}
+    void writeln() {
+        this.console.writeln(
+                MessageView.ATTEMPTS.getMessage().replaceFirst("#attempts", "" +
+                        this.playController.getAttempts()));
+    }
 
 }
