@@ -1,8 +1,6 @@
 package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views;
 
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.utils.Console;
-
-enum MessageView {
+public enum MessageView {
 	ATTEMPTS("#attempts attempt(s): "),
 	SECRET("*"),
 	RESUME("Do you want to continue"),
@@ -13,25 +11,13 @@ enum MessageView {
 	LOOSER("You've lost!!! :-(");
 
 	private String message;
-
+	
 	private MessageView(String message) {
 		this.message = message;
 	}
-
-	void write() {
-		new Console().write(this.message);
-	}
-
-	void writeln() {
-		new Console().writeln(this.message);
-	}
-
-	void writeln(int attempts) {
-		new Console().writeln(this.message.replaceAll("#attempts", "" + attempts));
-	}
-
-	void writeln(int blacks, int whites) {
-		new Console().writeln(this.message.replaceFirst("#blacks", "" + blacks).replaceFirst("#whites", "" + whites));
+	
+	public String getMessage() {
+		return this.message;
 	}
 
 }

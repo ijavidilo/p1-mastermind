@@ -1,12 +1,18 @@
 package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.console;
 
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.StartController;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.MessageView;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.utils.WithConsoleView;
 
-class StartView {
-
+class StartView extends WithConsoleView {
+	
+	private SecretCombinationView secretCombinationView;
+	
 	void interact(StartController startController) {
-		MessageView.TITLE.writeln();
-		startController.getSecretCombination();
+		startController.start();
+		this.console.writeln(MessageView.TITLE.getMessage());
+		this.secretCombinationView = new SecretCombinationView(startController);
+		this.secretCombinationView.writeln();
 	}
 
 }

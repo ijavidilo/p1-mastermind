@@ -1,15 +1,14 @@
 package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views;
 
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Color;
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.utils.WithConsoleView;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.types.Color;
 
-class ColorView extends WithConsoleView{
+public class ColorView {
 	
-	private static final char[] INITIALS = {'r', 'b', 'y', 'g', 'o', 'p'};
+	public static final char[] INITIALS = {'r', 'b', 'y', 'g', 'o', 'p'};
 
-	private Color color;
+	protected Color color;
 
-	ColorView(Color color) {
+	public ColorView(Color color) {
 		this.color = color;
 	}
 
@@ -20,18 +19,18 @@ class ColorView extends WithConsoleView{
 		}
 		return result;
 	}
+	
+	public char getInitial() {
+		return ColorView.INITIALS[this.color.ordinal()];
+	}
 
-	static Color getInstance(char character) {
+	public static Color getInstance(char character) {
 		for (int i = 0; i < ColorView.INITIALS.length; i++) {
 			if (ColorView.INITIALS[i] == character) {
 				return Color.values()[i];
 			}
 		}
 		return null;
-	}
-	
-	void write() {
-		this.console.write(ColorView.INITIALS[this.color.ordinal()]);
 	}
 
 }

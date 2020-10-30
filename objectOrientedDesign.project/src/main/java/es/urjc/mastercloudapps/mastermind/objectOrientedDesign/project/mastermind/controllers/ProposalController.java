@@ -1,43 +1,72 @@
 package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers;
 
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Combination;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Game;
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.ProposedCombination;
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Result;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.State;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.types.Color;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.types.Error;
 
-public class ProposalController extends UseCaseController {
+import java.util.List;
 
-    public ProposalController(Game game, State state) {
-        super(game, state);
-    }
+public class ProposalController extends Controller {
 
-    public boolean isWinner() {
-        return this.game.isWinner();
-    }
+	public ProposalController(Game game, State state) {
+		super(game, state);
+	}
 
-    public boolean isLooser() {
-        return this.game.isLooser();
-    }
+	public Error addProposedCombination(List<Color> colors) {
+		Error error = null;
+		if (colors.size() != Combination.getWidth()) {
+			error = Error.WRONG_LENGTH;
+		} else {
+			for (int i = 0; i < colors.size(); i++) {
+				if (colors.get(i) == null) {
+					error = Error.WRONG_CHARACTERS;
+				} else {
+					for (int j = i+1; j < colors.size(); j++) {
+						if (colors.get(i) == colors.get(j)) {
+							error = Error.DUPLICATED;
+						}
+					}
+				}				
+			}
+		}
+		if (error == null){
+			this.game.addProposedCombination(colors);
+			if (this.game.isWinner() || this.game.isLooser()) {
+				this.state.next();
+			}
+		}
+		return error;	
+	}
 
-    public void addProposedCombination(ProposedCombination proposedCombination) {
-        this.game.addProposedCombination(proposedCombination);
-    }
+	public boolean isWinner() {
+		return this.game.isWinner();
+	}
 
-    public int getAttempts() {
-        return this.game.getAttempts();
-    }
+	public boolean isLooser() {
+		return this.game.isLooser();
+	}
+	
+	public int getAttempts() {
+		return this.game.getAttempts();
+	}
 
-    public ProposedCombination getProposedCombination(int position) {
-        return this.game.getProposedCombination(position);
-    }
+	public List<Color> getColors(int position) {
+		return this.game.getColors(position);
+	}
 
-    public Result getResult(int position) {
-        return this.game.getResult(position);
-    }
+	public int getBlacks(int position) {
+		return this.game.getBlacks(position);
+	}
 
-    @Override
-    public void accept(ControllerVisitor controllerVisitor) {
-        controllerVisitor.visit(this);
-    }
+	public int getWhites(int position) {
+		return this.game.getWhites(position);
+	}
+	
+	@Override
+	public void accept(ControllersVisitor controllersVisitor) {
+		controllersVisitor.visit(this);
+	}
 
 }

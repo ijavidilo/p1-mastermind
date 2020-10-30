@@ -4,18 +4,17 @@ import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermin
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.MessageView;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.utils.WithConsoleView;
 
-class ResultView extends WithConsoleView {
-	
+public class AttemptsView extends WithConsoleView {
+
 	private ProposalController proposalController;
-	
-	ResultView(ProposalController proposalController){
+
+	AttemptsView(ProposalController proposalController) {
 		this.proposalController = proposalController;
 	}
 
-	void writeln(int i) {
-		this.console.writeln(MessageView.RESULT.getMessage()
-				.replaceFirst("#blacks", "" + this.proposalController.getBlacks(i))
-				.replaceFirst("#whites", "" + this.proposalController.getWhites(i)));
+	void writeln() {
+		this.console.writeln(MessageView.ATTEMPTS.getMessage().replaceFirst("#attempts",
+				"" + this.proposalController.getAttempts()));
 	}
 
 }

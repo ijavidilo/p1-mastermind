@@ -1,52 +1,35 @@
 package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.console;
 
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Color;
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Combination;
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Error;
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.ProposedCombination;
+import java.util.ArrayList;
+import java.util.List;
+
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.ProposalController;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.types.Color;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.console.ColorView;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.utils.WithConsoleView;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.MessageView;
 
 class ProposedCombinationView extends WithConsoleView {
-
-	private ProposedCombination proposedCombination;
-
-	ProposedCombinationView(ProposedCombination proposedCombination) {
-		this.proposedCombination = proposedCombination;
+	
+	private ProposalController proposalController;
+	
+	ProposedCombinationView(ProposalController proposalController) {
+		this.proposalController = proposalController;
 	}
-
-	void write() {
-		for (Color color: this.proposedCombination.getColors()) {
+	
+	void write(int position) {
+		for (Color color : this.proposalController.getColors(position)) {
 			new ColorView(color).write();
 		}
 	}
 
-	void read() {
-		Error error;
-		do {
-			error = null;
-			MessageView.PROPOSED_COMBINATION.write();
-			String characters = this.console.readString();
-            if ((characters.length() > Combination.getWidth()) || (characters.length() != Combination.getWidth())) {
-				error = Error.WRONG_LENGTH;
-			} else {
-				for (int i = 0; i < characters.length(); i++) {
-					Color color = ColorView.getInstance(characters.charAt(i));
-					if (color == null) {
-						error = Error.WRONG_CHARACTERS;
-					} else {
-						if (this.proposedCombination.getColors().contains(color)) {
-							error = Error.DUPLICATED;
-						} else {
-							this.proposedCombination.getColors().add(color);
-						}
-					}
-				}
-			}
-			if (error != null) {
-				new ErrorView(error).writeln();
-				this.proposedCombination.getColors().clear();
-			}
-		} while (error != null);
+	List<Color> read() {
+		String characters = this.console.readString(MessageView.PROPOSED_COMBINATION.getMessage());
+		List<Color> colors = new ArrayList<Color>();
+		for (int i=0; i<characters.length(); i++) {
+			colors.add(ColorView.getInstance(characters.charAt(i)));
+		}
+		return colors;
 	}
-
+	
 }

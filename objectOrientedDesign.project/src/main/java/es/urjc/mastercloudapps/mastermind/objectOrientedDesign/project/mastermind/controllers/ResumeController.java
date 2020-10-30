@@ -3,20 +3,24 @@ package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermi
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Game;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.State;
 
-public class ResumeController extends UseCaseController {
+public class ResumeController extends Controller {
 
-    public ResumeController(Game game, State state) {
-        super(game, state);
-    }
+	public ResumeController(Game game, State state) {
+		super(game, state);
+	}
+	
+	public void resume(boolean newGame) {
+		if (newGame) {
+			this.game.clear();
+			this.state.reset();
+		} else {
+			this.state.next();
+		}
+	}
 
-    public void clear() {
-        this.game.clear();
-        this.state.reset();
-    }
-
-    @Override
-    public void accept(ControllerVisitor controllerVisitor) {
-        controllerVisitor.visit(this);
-    }
+	@Override
+	public void accept(ControllersVisitor controllersVisitor) {
+		controllersVisitor.visit(this);
+	}
 
 }
