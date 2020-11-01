@@ -7,10 +7,10 @@ public class GameMemento {
 
     private List<ProposedCombination> proposedCombinations;
     private List<Result> results;
-    private int turn;
+    private int attempts;
 
-    public GameMemento(int turn) {
-        this.turn = turn;
+    public GameMemento(int attempts) {
+        this.attempts = attempts;
         this.proposedCombinations = new ArrayList<ProposedCombination>();
         this.results = new ArrayList<Result>();
     }
@@ -32,8 +32,8 @@ public class GameMemento {
         return proposedCombinations.size();
     }
 
-    public int getTurn() {
-        return this.turn;
+    public int getAttempts() {
+        return this.attempts;
     }
 
 }

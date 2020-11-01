@@ -2,19 +2,13 @@ package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermi
 
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Session;
 
-public class ResumeController extends UseCaseController implements AcceptorController {
+public abstract class ResumeController extends AcceptorController {
 
     public ResumeController(Session session) {
         super(session);
     }
 
-    public void resume(boolean newGame) {
-        if (newGame) {
-            this.session.isNewGame();
-        } else {
-            this.session.next();
-        }
-    }
+    public abstract void resume(boolean isNewGame);
 
     @Override
     public void accept(ControllersVisitor controllersVisitor) {

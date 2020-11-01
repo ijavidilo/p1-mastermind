@@ -1,7 +1,6 @@
-package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.console;
+package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views;
 
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.StartController;
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.MessageView;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.utils.WithConsoleView;
 
 public class StartView extends WithConsoleView {

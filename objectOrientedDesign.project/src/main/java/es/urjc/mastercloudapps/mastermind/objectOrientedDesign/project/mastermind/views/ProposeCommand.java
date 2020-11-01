@@ -1,9 +1,8 @@
-package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.console;
+package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views;
 
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.PlayController;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.types.Color;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.types.Error;
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.MessageView;
 
 import java.util.List;
 

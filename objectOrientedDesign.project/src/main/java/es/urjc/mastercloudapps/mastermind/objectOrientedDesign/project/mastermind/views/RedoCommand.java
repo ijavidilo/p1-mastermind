@@ -1,7 +1,6 @@
-package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.console;
+package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views;
 
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.PlayController;
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.MessageView;
 
 public class RedoCommand extends Command {
 

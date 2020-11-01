@@ -1,7 +1,13 @@
 package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers;
 
-public interface AcceptorController {
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Session;
 
-    void accept(ControllersVisitor controllerVisitor);
+public abstract class AcceptorController extends UseCaseController {
+
+    AcceptorController(Session session) {
+        super(session);
+    }
+
+    public abstract void accept(ControllersVisitor controllersVisitor);
 
 }

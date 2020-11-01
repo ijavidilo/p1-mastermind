@@ -1,8 +1,9 @@
 package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views;
 
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.types.Error;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.utils.WithConsoleView;
 
-public class ErrorView {
+public class ErrorView extends WithConsoleView {
 
     public static final String[] MESSAGES = {
             "Repeated colors",
@@ -15,8 +16,8 @@ public class ErrorView {
         this.error = error;
     }
 
-    public String getMessage() {
-        return ErrorView.MESSAGES[this.error.ordinal()];
+    public void writeln() {
+        this.console.writeln(ErrorView.MESSAGES[this.error.ordinal()]);
     }
 
 }

@@ -1,7 +1,6 @@
-package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.console;
+package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views;
 
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.UseCaseController;
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.MessageView;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.utils.WithConsoleView;
 
 public class SecretCombinationView extends WithConsoleView {

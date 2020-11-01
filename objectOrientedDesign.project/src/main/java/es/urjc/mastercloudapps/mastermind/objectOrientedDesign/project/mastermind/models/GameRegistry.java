@@ -25,12 +25,12 @@ public class GameRegistry {
 
     public void undo(Game game) {
         this.firstPrevious++;
-        game.set(this.mementoList.get(this.firstPrevious));
+        game.loadMemento(this.mementoList.get(this.firstPrevious));
     }
 
     public void redo(Game game) {
         this.firstPrevious--;
-        game.set(this.mementoList.get(this.firstPrevious));
+        game.loadMemento(this.mementoList.get(this.firstPrevious));
     }
 
     public boolean undoable() {

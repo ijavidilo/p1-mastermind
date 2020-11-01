@@ -2,15 +2,13 @@ package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermi
 
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Session;
 
-public class StartController extends UseCaseController implements AcceptorController {
+public abstract class StartController extends AcceptorController {
 
     public StartController(Session session) {
         super(session);
     }
 
-    public void start() {
-        this.session.next();
-    }
+    public abstract void start();
 
     @Override
     public void accept(ControllersVisitor controllersVisitor) {

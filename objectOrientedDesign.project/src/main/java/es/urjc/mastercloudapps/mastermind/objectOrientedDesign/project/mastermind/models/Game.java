@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Game {
 
-    private static final int MAX_LONG = 10;
+    private static final int MAX_LONG = 3;
 
     private SecretCombination secretCombination;
     private List<ProposedCombination> proposedCombinations;
@@ -68,8 +68,8 @@ public class Game {
         return memento;
     }
 
-    public void set(GameMemento memento) {
-        this.attempts = memento.getTurn();
+    public void loadMemento(GameMemento memento) {
+        this.attempts = memento.getAttempts();
         this.proposedCombinations = new ArrayList<ProposedCombination>();
         this.results = new ArrayList<Result>();
         for (int i = 0; i < memento.getSize(); i++) {

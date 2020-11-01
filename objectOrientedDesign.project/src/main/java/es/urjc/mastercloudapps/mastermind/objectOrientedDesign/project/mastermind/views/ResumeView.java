@@ -1,7 +1,6 @@
-package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.console;
+package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views;
 
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers.ResumeController;
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.MessageView;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.utils.YesNoDialog;
 
 public class ResumeView {
