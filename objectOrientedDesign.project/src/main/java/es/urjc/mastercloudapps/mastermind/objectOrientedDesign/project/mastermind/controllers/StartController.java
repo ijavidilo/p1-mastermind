@@ -2,6 +2,7 @@ package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermi
 
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Game;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.State;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.StartView;
 
 public class StartController extends UseCaseController {
 
@@ -9,14 +10,10 @@ public class StartController extends UseCaseController {
         super(game, state);
     }
 
-    public void getSecretCombination() {
-        this.game.getSecretCombination();
-        this.state.next();
-    }
-
     @Override
-    public void accept(ControllerVisitor controllerVisitor) {
-        controllerVisitor.visit(this);
+    public void control() {
+        this.state.next();
+        new StartView().write(this.getWidth());
     }
 
 }

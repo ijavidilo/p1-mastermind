@@ -1,7 +1,7 @@
 # P1: Mastermind - Javier Diaz Lopez (parte 7: Arquitectura MVC con Vista Pasiva)
 
   * ## Anotaciones alumno: 
-  > Para realizar esta parte de la práctica se ha empezado la implementación partiendo de mi propio codigo de la rama "modelViewPresenter". 
+  > Para realizar esta parte de la práctica se ha empezado la implementación partiendo de mi propio codigo de la rama "modelViewPresenter". Se ha entendido el estilo Vista Pasiva pero no he logrado que funcionara al 100%. Le falta algún pequeño detalle para que actualice los resultados, el resto funciona bien.
 
 ## Modelo del Dominio
 ![This is a alt text.](Mastermind.jpg "Mastermind.")

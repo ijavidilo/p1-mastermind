@@ -5,55 +5,72 @@ import java.util.List;
 
 public class Game {
 
-	private static final int MAX_LONG = 10;
+    private static final int MAX_LONG = 10;
 
-	private SecretCombination secretCombination;
+    private SecretCombination secretCombination;
+    private List<ProposedCombination> proposedCombinations;
+    private List<Result> results;
+    private int attempts;
 
-	private List<ProposedCombination> proposedCombinations;
+    public Game() {
+        this.clear();
+    }
 
-	private List<Result> results;
+    public void clear() {
+        this.secretCombination = new SecretCombination();
+        this.proposedCombinations = new ArrayList<ProposedCombination>();
+        this.results = new ArrayList<Result>();
+        this.attempts = 0;
+    }
 
-	private int attempts;
+    public void addProposedCombination(List<Color> colors) {
+        ProposedCombination proposedCombination = new ProposedCombination(colors);
+        this.proposedCombinations.add(proposedCombination);
+        this.results.add(this.secretCombination.getResult(proposedCombination));
+        this.attempts++;
+    }
 
-	public Game() {
-		this.clear();
-	}
+    public SecretCombination getSecretCombination() {
+        return this.secretCombination;
+    }
 
-	public void clear() {
-		this.secretCombination = new SecretCombination();
-		this.proposedCombinations = new ArrayList<ProposedCombination>();
-		this.results = new ArrayList<Result>();
-		this.attempts = 0;
-	}
+    public boolean isLooser() {
+        return this.attempts == Game.MAX_LONG;
+    }
 
-	public void addProposedCombination(ProposedCombination proposedCombination) {
-		this.proposedCombinations.add(proposedCombination);
-		this.results.add(this.secretCombination.getResult(proposedCombination));
-		this.attempts++;
-	}
+    public boolean isWinner() {
+        if (this.attempts == 0) {
+            return false;
+        }
+        return this.results.get(this.attempts - 1).isWinner();
+    }
 
-	public SecretCombination getSecretCombination() {
-		return this.secretCombination;
-	}
+    public int getAttempts() {
+        return this.attempts;
+    }
 
-	public boolean isLooser() {
-		return this.attempts == Game.MAX_LONG;
-	}
-	
-	public boolean isWinner() {
-		return this.results.get(this.attempts-1).isWinner();
-	}
+    public ProposedCombination getProposedCombination(int position) {
+        return this.proposedCombinations.get(position);
+    }
 
-	public int getAttempts() {
-		return this.attempts;
-	}
+    public Result getResult(int position) {
+        return this.results.get(position);
+    }
 
-	public ProposedCombination getProposedCombination(int position) {
-		return this.proposedCombinations.get(position);
-	}
+    public List<Color> getColors(int position) {
+        return this.proposedCombinations.get(position).colors;
+    }
 
-	public Result getResult(int position) {
-		return this.results.get(position);
-	}
+    public int getBlacks(int position) {
+        return this.results.get(position).getBlacks();
+    }
+
+    public int getWhites(int position) {
+        return this.results.get(position).getWhites();
+    }
+
+    public int getWidth() {
+        return Combination.getWidth();
+    }
 
 }

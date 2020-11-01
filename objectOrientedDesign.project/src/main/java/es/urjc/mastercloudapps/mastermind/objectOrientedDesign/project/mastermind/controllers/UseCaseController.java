@@ -12,11 +12,10 @@ public abstract class UseCaseController {
 		this.game = game;
 		this.state = state;
 	}
-
-	public void next() {
-		this.state.next();
+	int getWidth() {
+		return this.game.getWidth();
 	}
 
-	public abstract void accept(ControllerVisitor controllerVisitor);
+	public abstract void control();
 
 }

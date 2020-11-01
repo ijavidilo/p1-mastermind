@@ -9,7 +9,7 @@ public class State {
     }
 
     public void reset() {
-        this.stateValue = StateValue.CLOSE;
+        this.stateValue = StateValue.INITIAL;
     }
 
     public void next() {

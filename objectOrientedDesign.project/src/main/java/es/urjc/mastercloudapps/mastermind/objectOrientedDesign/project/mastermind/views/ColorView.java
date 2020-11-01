@@ -3,35 +3,39 @@ package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermi
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Color;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.utils.WithConsoleView;
 
-class ColorView extends WithConsoleView{
-	
-	private static final char[] INITIALS = {'r', 'b', 'y', 'g', 'o', 'p'};
+class ColorView extends WithConsoleView {
 
-	private Color color;
+    private static final char[] INITIALS = {'r', 'b', 'y', 'g', 'o', 'p'};
 
-	ColorView(Color color) {
-		this.color = color;
-	}
+    protected Color color;
 
-	static String allInitials() {
-		String result = "";
-		for(char character: ColorView.INITIALS) {
-			result += character;
-		}
-		return result;
-	}
+    ColorView(Color color) {
+        this.color = color;
+    }
 
-	static Color getInstance(char character) {
-		for (int i = 0; i < ColorView.INITIALS.length; i++) {
-			if (ColorView.INITIALS[i] == character) {
-				return Color.values()[i];
-			}
-		}
-		return null;
-	}
-	
-	void write() {
-		this.console.write(ColorView.INITIALS[this.color.ordinal()]);
-	}
+    static String allInitials() {
+        String result = "";
+        for (char character : ColorView.INITIALS) {
+            result += character;
+        }
+        return result;
+    }
+
+    char getInitial() {
+        return ColorView.INITIALS[this.color.ordinal()];
+    }
+
+    static Color getInstance(char character) {
+        for (int i = 0; i < ColorView.INITIALS.length; i++) {
+            if (ColorView.INITIALS[i] == character) {
+                return Color.values()[i];
+            }
+        }
+        return null;
+    }
+
+    void write() {
+        this.console.write(ColorView.INITIALS[this.color.ordinal()]);
+    }
 
 }
