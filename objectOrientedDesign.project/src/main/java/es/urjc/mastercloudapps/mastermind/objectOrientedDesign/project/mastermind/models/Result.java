@@ -2,30 +2,27 @@ package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermi
 
 public class Result {
 
-    private int blacks = 0;
-    private int whites = 0;
+	private int blacks = 0;
 
-    public Result(int blacks, int whites) {
-        assert blacks >= 0;
-        assert whites >= 0;
-        this.blacks = blacks;
-        this.whites = whites;
-    }
+	private int whites = 0;
 
-    public boolean isWinner() {
-        return this.blacks == Combination.getWidth();
-    }
+	Result(int blacks, int whites) {
+		assert blacks >= 0;
+		assert whites >= 0;
+		this.blacks = blacks;
+		this.whites = whites;
+	}
 
-    public int getBlacks() {
-        return this.blacks;
-    }
+	boolean isWinner() {
+		return this.blacks == Combination.getWidth();
+	}
 
-    public int getWhites() {
-        return this.whites;
-    }
+	public int getBlacks() {
+		return this.blacks;
+	}
 
-    public Result copy() {
-        return new Result(this.blacks, this.whites);
-    }
+	public int getWhites() {
+		return this.whites;
+	}
 
 }

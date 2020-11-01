@@ -1,7 +1,5 @@
 package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models;
 
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.types.Color;
-
 import java.util.ArrayList;
 import java.util.List;
 

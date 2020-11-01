@@ -1,23 +1,23 @@
 package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models;
 
 public class State {
-		
-	private StateValue stateValue;
-	
-	public State() {
-		this.stateValue = StateValue.INITIAL;
-	}
 
-	public void reset() {
-		this.stateValue = StateValue.INITIAL;
-	}
+    private StateValue stateValue;
 
-	public void next() {
-		this.stateValue = StateValue.values()[this.stateValue.ordinal()+1];
-	}
+    public State() {
+        this.reset();
+    }
 
-	public StateValue getValueState() {
-		return this.stateValue;
-	}
-	
+    public void reset() {
+        this.stateValue = StateValue.CLOSE;
+    }
+
+    public void next() {
+        this.stateValue = StateValue.values()[this.stateValue.ordinal() + 1];
+    }
+
+    public StateValue getValueState() {
+        return this.stateValue;
+    }
+
 }

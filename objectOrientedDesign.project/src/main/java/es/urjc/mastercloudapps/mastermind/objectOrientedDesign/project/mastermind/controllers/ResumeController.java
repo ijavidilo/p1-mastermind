@@ -1,18 +1,22 @@
 package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers;
 
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Session;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Game;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.State;
 
-public abstract class ResumeController extends AcceptorController {
+public class ResumeController extends UseCaseController {
 
-    public ResumeController(Session session) {
-        super(session);
+    public ResumeController(Game game, State state) {
+        super(game, state);
     }
 
-    public abstract void resume(boolean isNewGame);
+    public void clear() {
+        this.game.clear();
+        this.state.reset();
+    }
 
     @Override
-    public void accept(ControllersVisitor controllersVisitor) {
-        controllersVisitor.visit(this);
+    public void accept(ControllerVisitor controllerVisitor) {
+        controllerVisitor.visit(this);
     }
 
 }

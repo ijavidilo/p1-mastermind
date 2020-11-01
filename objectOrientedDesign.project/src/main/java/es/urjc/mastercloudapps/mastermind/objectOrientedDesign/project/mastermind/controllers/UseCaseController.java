@@ -1,22 +1,22 @@
 package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers;
 
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Session;
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.StateValue;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Game;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.State;
 
 public abstract class UseCaseController {
 
-    protected Session session;
+	protected Game game;
+	protected State state;
 
-    public UseCaseController(Session session) {
-        this.session = session;
-    }
+	UseCaseController(Game game, State state) {
+		this.game = game;
+		this.state = state;
+	}
 
-    public int getWidth() {
-        return this.session.getWidth();
-    }
+	public void next() {
+		this.state.next();
+	}
 
-    public StateValue getValueState() {
-        return this.session.getValueState();
-    }
+	public abstract void accept(ControllerVisitor controllerVisitor);
 
 }

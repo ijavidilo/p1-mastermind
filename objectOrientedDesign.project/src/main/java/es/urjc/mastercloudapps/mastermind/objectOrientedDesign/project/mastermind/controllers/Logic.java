@@ -1,6 +1,7 @@
 package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.controllers;
 
-import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Session;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Game;
+import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.State;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.StateValue;
 
 import java.util.HashMap;
@@ -8,15 +9,22 @@ import java.util.Map;
 
 public class Logic {
 
-    protected Session session;
-    protected Map<StateValue, AcceptorController> acceptorControllers;
+    private Game game;
+    private State state;
+    private Map<StateValue, UseCaseController> controllers;
 
-    protected Logic() {
-        this.acceptorControllers = new HashMap<StateValue, AcceptorController>();
+    public Logic() {
+        this.state = new State();
+        this.game = new Game();
+        this.controllers = new HashMap<StateValue, UseCaseController>();
+        this.controllers.put(StateValue.CLOSE, new StartController(this.game, this.state));
+        this.controllers.put(StateValue.OPEN, new ProposalController(this.game, this.state));
+        this.controllers.put(StateValue.FINISHED, new ResumeController(this.game, this.state));
+        this.controllers.put(StateValue.EXIT, null);
     }
 
-    public AcceptorController getController() {
-        return this.acceptorControllers.get(this.session.getValueState());
+    public UseCaseController getController() {
+        return this.controllers.get(this.state.getValueState());
     }
 
 }

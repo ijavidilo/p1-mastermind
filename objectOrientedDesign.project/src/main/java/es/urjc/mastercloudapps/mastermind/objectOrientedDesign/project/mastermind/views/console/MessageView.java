@@ -1,4 +1,4 @@
-package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views;
+package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.console;
 
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.utils.Console;
 

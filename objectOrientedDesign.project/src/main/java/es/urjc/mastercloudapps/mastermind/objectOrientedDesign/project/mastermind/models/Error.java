@@ -1,8 +1,8 @@
 package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models;
 
-public enum StateValue {
-    CLOSE,
-    OPEN,
-    FINISHED,
-    EXIT;
+public enum Error {
+	DUPLICATED,
+	WRONG_CHARACTERS,
+	WRONG_LENGTH;
+	
 }

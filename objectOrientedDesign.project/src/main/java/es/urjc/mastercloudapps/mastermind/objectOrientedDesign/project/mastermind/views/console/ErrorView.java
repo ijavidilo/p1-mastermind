@@ -1,4 +1,4 @@
-package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views;
+package es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.views.console;
 
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.mastermind.models.Error;
 import es.urjc.mastercloudapps.mastermind.objectOrientedDesign.project.utils.WithConsoleView;
@@ -7,7 +7,7 @@ class ErrorView extends WithConsoleView {
 
 	private static final String[] MESSAGES = { 
 			"Repeated colors",
-			"Wrong colors, they must be: " + ColorView.allInitials(), 
+			"Wrong colors, they must be: " + ColorView.allInitials(),
 			"Wrong proposed combination length" };
 
 	private Error error;
