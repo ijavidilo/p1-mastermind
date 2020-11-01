@@ -1,7 +1,7 @@
 # P1: Mastermind - Javier Diaz Lopez (parte 6: Cliente/Servidor)
 
   * ## Anotaciones alumno: 
-  > Para realizar esta parte de la práctica se ha empezado la implementación partiendo de mi propio codigo de la rama "mvp.pm.withComposite". 
+  > Para realizar esta parte de la práctica se ha empezado la implementación partiendo de mi propio codigo de la rama "mvp.pm.withComposite". Se ha implementado el patron Proxy usando sockets cliente/servidor para el envio de diferentes tramas pero no se ha finalizado cada dispatcher por falta de tiempo. 
 
 ## Modelo del Dominio
 ![This is a alt text.](Mastermind.jpg "Mastermind.")

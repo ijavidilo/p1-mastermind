@@ -71,7 +71,6 @@ public class SessionImplementation implements Session {
         this.gameRegistry.redo(this.game);
     }
 
-    @Override
     public int getWidth() {
         return this.game.getWidth();
     }
