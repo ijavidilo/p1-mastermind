@@ -1,7 +1,7 @@
 # P1: Mastermind - Javier Diaz Lopez (parte 5: UndoRedo)
 
   * ## Anotaciones alumno: 
-  > Para realizar esta parte de la práctica se ha empezado la implementación partiendo de la base proporcionada del profesor de la rama "mvp.pm.-doubleDispathing". 
+  > Para realizar esta parte de la práctica se ha empezado la implementación partiendo de la base proporcionada del profesor de la rama "mvp.pm.-doubleDispathing". Se han incluido los patrones Command, Composite y Memento correctamente. Se han entendido y aplicado los conceptos perfectamente. 
 
 ## Modelo del Dominio
 ![This is a alt text.](Mastermind.jpg "Mastermind.")
@@ -47,10 +47,24 @@ Entrega de un proyecto público en git varias ramas:
               *  https://github.com/ijavidilo/p1-mastermind/releases/tag/mvp.pm.withDoubleDispatching
 > * **mvp.pm.withComposite**, con:
 >    * el diseño de clases, con plantuml en readme o con StarUML con el documento  
->    * solución en Java o similar (fuertemente tipado) basada en el capitulo de Patrones de diseño y el proyecto ticTacToe
+>    * solución en Java o similar (fuertemente tipado) basada en el capitulo de Patrones de Diseño y Arquitectura y el proyecto ticTacToe
 >        * Modelo del Dominio: https://github.com/ijavidilo/p1-mastermind/tree/master#diagrama
->        * Requisitos:  https://github.com/ijavidilo/p1-mastermind/tree/master/Requisitos
->        * Diseño: 
+>        * Requisitos:  https://github.com/USantaTecla-ticTacToe/tictactoe.requirements/tree/3.UndoRedo
+>        * Diseño: https://github.com/USantaTecla-ticTacToe/tictactoe/tree/mvp.pm.withComposite/docs
 >        * Implementación:  https://github.com/ijavidilo/p1-mastermind/tree/mvp.pm.withComposite/objectOrientedDesign.project
+* **mvp.pm.withProxy**, con:
+    * el diseño de clases, con plantuml en readme o con StarUML con el documento  
+    * solución en Java o similar (fuertemente tipado) basada en el capitulo de Patrones de Diseño y Arquitectura y el proyecto ticTacToe
+        * Modelo del Dominio: https://github.com/USantaTecla-ticTacToe/tictactoe.requirements
+        * Requisitos: https://github.com/USantaTecla-ticTacToe/tictactoe.requirements/tree/4.ClienteServidor
+        * Diseño: https://github.com/USantaTecla-ticTacToe/tictactoe/tree/mvp.pm.withProxy/docs
+        * Implementación: https://github.com/ijavidilo/p1-mastermind/tree/mvp.pm.withProxy/objectOrientedDesign.project
+* **mvp.pv**, con:
+    * el diseño de clases, con plantuml en readme o con StarUML con el documento  
+    * solución en Java o similar (fuertemente tipado) basada en el capitulo de Patrones de Diseño y Arquitectura y el proyecto ticTacToe
+        * Modelo del Dominio: https://github.com/USantaTecla-ticTacToe/tictactoe.requirements
+        * Requisitos: https://github.com/ijavidilo/p1-mastermind/tree/master/Requisitos
+        * Diseño: https://github.com/USantaTecla-ticTacToe/tictactoe/tree/mvp.pv/docs
+        * Implementación:  https://github.com/ijavidilo/p1-mastermind/tree/mvp.pv/objectOrientedDesign.project
 
 Master Cloud Apps curso 2020/21 [MasterCloudApps](https://www.codeurjc.es/mastercloudapps/).
