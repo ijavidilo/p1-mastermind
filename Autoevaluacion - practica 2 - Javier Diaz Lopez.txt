@@ -1,0 +1,31 @@
+Alumno:
+-------
+Javier Díaz López
+
+URL repositorio práctica: 
+-------------------------
+https://github.com/ijavidilo/p1-mastermind
+	- **mvp.pm.withComposite** -> https://github.com/ijavidilo/p1-mastermind/tree/mvp.pm.withComposite
+	- **mvp.pm.withProxy** -> https://github.com/ijavidilo/p1-mastermind/tree/mvp.pm.withProxy
+	- **mvp.pv** -> https://github.com/ijavidilo/p1-mastermind/tree/mvp.pv
+
+Autoevaluación del alumno:
+--------------------------
+(Calificación: 9,5)
+
+Me he sentido mucho mas cómodo en esta segunda parte de la práctica al conocer mejor los quehaceres semanales explicados por Luis. Dos aspectos:	
+* Estudio: sobresaliente. (10)
+	He necesitado más horas de las propuestas para entender los diferentes patrones, arquitectura del software... 
+* Implementaciones: sobresaliente. (9)
+	Me han quedado pequeños aspectos en dos de las ramas propuestas pero estoy muy contento con el resultado final y con lo entregado.
+
+Evaluación del profesor:
+------------------------
+(Calificación: 9,5)
+
+Lo malo:
+	- Demasiados patrones... (no tiene la culpa :/)
+Lo bueno:
+	- Explicaciones a dudas/comentarios de diferentes maneras/puntos de vista para que lo entiendas.
+	- Destacar la entrega de Luis para que entendamos los patrones... son demasiados y complejos y hemos repasado una y otra vez hasta pulir detalles.
+	- Creo que en estas semanas se ha esforzado en explicar más y mejor el que, como y cuando entregar la práctica y así ha facilitado al alumno a organizarse mejor su tiempo. En mi caso al trabajar, la organización de tiempos y entregas me viene genial para administrarme lo mejor posible.
